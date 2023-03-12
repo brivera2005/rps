@@ -21,14 +21,44 @@
         }
         return(comp);
     }
-    let compChoice = getComputerChoice();
-    console.log(compChoice);
+      
+    function play(playerSelection, computerSelection)   {
+        let compChoice = getComputerChoice();
+        let userChoice = prompt("Throw Rock, Paper, or Scissors: ");
 
+        if (userChoice == "Rock" && compChoice == "Paper")  {
+            console.log("Computer throws " + compChoice + ". YOU LOSE.")
+        }
+        else if (userChoice == "Rock" && compChoice == "Scissors")  {
+            console.log("Computer throws " + compChoice + ". YOU WIN.")
+        }
+        else if (userChoice == "Rock" && compChoice == "Rock")  {
+            console.log("Computer throws " + compChoice + ". YOU TIE.")
+        }
+        else if (userChoice == "Paper" && compChoice == "Paper")  {
+            console.log("Computer throws " + compChoice + ". YOU TIE.")
+        }  
+        else if (userChoice == "Paper" && compChoice == "Scissors")  {
+            console.log("Computer throws " + compChoice + ". YOU LOSE.")
+        }
+        else if (userChoice == "Paper" && compChoice == "Rock")  {
+            console.log("Computer throws " + compChoice + ". YOU WIN.")
+        }
+        else if (userChoice == "Scissors" && compChoice == "Paper")  {
+            console.log("Computer throws " + compChoice + ". YOU WIN.")
+        }
+        else if (userChoice == "Scissors" && compChoice == "Scissors")  {
+            console.log("Computer throws " + compChoice + ". YOU TIE.")
+        }
+        else if (userChoice == "Scissors" && compChoice == "Rock")  {
+            console.log("Computer throws " + compChoice + ". YOU LOSE.")
+        }
+        else {
+            console.log("Invalid Input.")
+        }
+    }
 
-
-
-
-
+    play();
     </script>
 </body>
 </html>
